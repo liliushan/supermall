@@ -1,0 +1,110 @@
+page{
+  padding-bottom: 100rpx;
+}
+.address{
+  margin-top: 20rpx;
+}
+.chooseAddress{
+  padding: 20rpx;
+}
+.chooseAddress text:nth-child(2){
+  float: right;
+}
+
+/* 内容部分 */
+.context-title{
+  color: var(--themeColor);
+  padding: 20rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  border-bottom: 2rpx solid var(--themeColor) ;
+}
+.goods-box{
+  width: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+.goods-item{
+  display: flex;
+  border-bottom: 2rpx solid #e3e3e3;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.check{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgShow{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgShow image{
+  width: 100%;
+}
+
+ .goods_info{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20rpx;
+}
+.goods_info view:nth-child(1){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cprice{
+  display: flex;
+  justify-content: space-between;
+}
+.cprice view:first-child{
+  color: var(--themeColor);
+  font-weight: 700;
+  font-size: 34rpx;
+}
+.cprice text{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border: 2rpx solid #eee;
+}
+
+/* 底部工具栏 */
+.footer_tool{
+  /* 固定定位的盒子一定要给宽度不然元素的宽度由内容撑开 */
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border-top: 2rpx solid #e3e3e3;
+  line-height: 100rpx;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom:0 ;
+}
+.quanxuan{
+  flex: 2;
+}
+.full_price{
+  flex: 3;
+}
+.full_price text{
+  color: var(--themeColor);
+  padding-left: 10rpx;
+}
+.footer_tool navigator{
+  flex: 2;
+  background-color: var(--themeColor);
+  color: #fff;
+}

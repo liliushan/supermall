@@ -1,0 +1,52 @@
+<view wx:if="{{address.userName}}" class="chooseAddress">
+	<text class="user">收货人:{{address.userName}}</text>
+	<text class="telnumber">电话:{{address.telNumber}}</text>
+	<view class="address">住址:{{address.provinceName + address.cityName +address.countyName + address.detailInfo}}</view>
+</view>
+<view class="address" wx:else>
+	<button type="primary" plain="true" bindtap="getchooseAdress">收获地址</button>
+</view>
+
+<!-- 标题部分 -->
+<view class="context-title">购物车</view>
+
+<!-- 商品展示 -->
+<view class="goods-box">
+<block wx:if="{{good_list.length !==0}}">
+		<view class="goods-item" wx:for="{{good_list}}">
+		<view class="check">
+			<checkbox-group bindchange="checked" data-index="{{index}}">
+				<checkbox checked="{{item.isActive}}"></checkbox>
+			</checkbox-group>
+		</view>
+		<view class="imgShow">
+			<image mode="widthFix" src="{{item.pics[0].pics_sma}}"></image>
+		</view>
+		<view class="goods_info">
+			<view>{{item.goods_name}}</view>
+			<view class="cprice">
+				<view>￥{{item.goods_price}}</view>
+				<view>
+					<text bindtap="countAdd" data-num="1" data-index="{{index}}">+</text>
+					<text>{{item.count}}</text>
+					<text bindtap="reduce" data-num="-1" data-index="{{index}}">-</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</block>
+<block wx:else>
+	<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3214428190,3968304704&fm=26&gp=0.jpg"></image>
+</block>
+</view>
+
+<!-- 底部的工具栏 -->
+<view class="footer_tool">
+	<view class="quanxuan">
+		<checkbox-group bindchange="allChecked">
+			<checkbox checked="{{isActive}}">全选</checkbox>
+		</checkbox-group>
+	</view>
+	<view class="full_price">合计:<text>￥{{fullPrice}}</text></view>
+	<navigator url="{{address?'/pages/pay/index':''}}"><view class="count" bindtap="settlement">结算({{fullCount}})</view></navigator>
+</view>

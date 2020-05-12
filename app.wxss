@@ -1,0 +1,24 @@
+/*
+  导入全局的样式文件
+*/
+@import "./styles/iconfont.wxss";
+
+
+/* 
+  公共的样式
+*/
+page,view,text{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+image{
+  vertical-align: middle;
+}
+
+/* 定义全局变量 */
+page{
+  --themeColor:#eb4450;
+  /* 设计稿375px 那么 1px = 2rpx 现在网页字体规定为14px那么就是 28rpx */
+  --themeFontSize:28rpx;
+}

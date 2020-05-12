@@ -1,0 +1,28 @@
+<search></search>
+
+<view class="category-box">
+  <scroll-view class="category-left" scroll-y> 
+    <view>
+		<navigator wx:for="{{categoryName}}">
+			<view class="{{index===current?'activeCategory':''}}" bindtap="addColor" data-index="{{index}}">{{item}}</view>
+		</navigator>
+	</view>
+  </scroll-view>
+  <scroll-view class="category-right" scroll-y scroll-top="{{scrollTop}}">
+    <view>
+		<view class="category-group" wx:for="{{categoryGoods[current]}}">
+			<navigator class="category-title">
+        <text>/</text>
+				<text>{{item.cat_name}}</text>
+        <text>/</text>
+			</navigator>
+			<view class="category-content">
+				<navigator wx:for="{{item.children}}" wx:for-item="value" wx:for-key="key" url="/pages/goods_list/index?cid={{value.cat_id}}">
+          <image mode="widthFix" src="{{value.cat_icon}}"></image>
+				  <view>{{value.cat_name}}</view>
+        </navigator>
+			</view>
+		</view>
+	</view>
+  </scroll-view>
+</view>

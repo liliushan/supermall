@@ -1,0 +1,52 @@
+/* 搜索部分开始 */
+.swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper swiper-item{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper swiper-item navigator{
+  width: 100%;
+  height: 100%;
+}
+.swiper swiper-item navigator image{
+  width: 100%;
+  height: 100%;
+}
+/* 搜索部分结束 */
+
+/* 楼层部分开始 */
+
+.title{
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.context{
+  overflow: hidden;
+}
+.context navigator{
+  width: 33.33%;
+  float: left;
+}
+.context navigator:nth-child(n+2){
+  /* n后面的数字，是几就是从第几个开始获取 */
+  height: calc(33.33vw * 386 / 232 /2);
+  box-sizing: border-box;
+}
+.context navigator image{
+  width: 100%;
+  height: 100%;
+}
+.context navigator:nth-child(2),.context navigator:nth-child(3){
+  /* n后面的数字，是几就是从第几个开始获取 */
+  border-bottom: 10rpx solid #fff;
+}
+.context navigator:nth-child(2),.context navigator:nth-child(4){
+  /* n后面的数字，是几就是从第几个开始获取 */
+  border-left: 10rpx solid #fff;
+  border-right: 10rpx solid #fff;
+}

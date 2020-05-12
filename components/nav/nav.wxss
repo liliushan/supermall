@@ -1,0 +1,13 @@
+/* components/nav/nav.wxss */
+
+.nav{
+  display: flex;
+  background-color: #fff;
+}
+.nav view{
+  flex: 1;
+  padding: 20rpx;
+}
+.nav view image{
+  width: 100%;
+}

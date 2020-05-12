@@ -1,0 +1,14 @@
+<search></search>
+<tab tab_title="{{tab_title}}"></tab>
+
+<view class="goods_list">
+	<navigator wx:for="{{goods_item}}" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+		<view class="goods_list_left">
+			<image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'http://image1.suning.cn/uimg/b2c/newcatentries/0070078570-000000000147821386_1_400x400.jpg'}}"></image>
+		</view>
+		<view class="goods_list_right">
+			<view>{{item.goods_name}}</view>
+			<view>￥{{item.goods_price}}</view>
+		</view>
+	</navigator>
+</view>

@@ -1,0 +1,32 @@
+<!-- 搜索部分开始 -->
+<search></search>
+<!-- 搜索部分结束 -->
+
+<!-- 轮播图部分开始 默认高度150px  原图 750 * 340  盒子 375 * x-->
+<swiper class="swiper" autoplay interval="1500" circular="true" indicator-dots indicator-color="#fff" indicator-active-color="var(--themeColor)">
+	<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+		<navigator>
+			<image src="{{item.image_src}}"></image>
+		</navigator>
+	</swiper-item>
+</swiper>
+<!-- 轮播图部分结束-->
+
+<!-- 导航部分开始 -->
+<nav navList="{{navList}}"></nav>
+<!-- 导航部分结束 -->
+
+<!-- 楼层部分的开始 -->
+<view class="floor">
+	<view class="floor-item" wx:for="{{floorList}}">
+		<view class="title">
+			<navigator><image src="{{item.floor_title.image_src}}" mode="widthFix"></image></navigator>
+		</view>
+		<view class="context">
+			<navigator wx:for="{{item.product_list}}" wx:for-item="value" wx:for-index="key">
+        <image mode="{{key===0?'widthFix':'scaleToFill'}}" src="{{value.image_src}}"></image>
+      </navigator>
+		</view>
+	</view>
+</view>
+<!-- 楼层部分的结束 -->

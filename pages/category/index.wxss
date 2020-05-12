@@ -1,0 +1,55 @@
+/* pages/category/index.wxss */
+
+page{
+  height: 100%;
+}
+.category-box{
+  /* 滚动的区域 = 视口的高度 - 搜索部分的高度 */
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+scroll-view{
+  /* 继承父亲的可滚动区域 */
+  height: 100%;
+}
+.category-left{
+  flex: 1;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.category-left view{
+  text-align: center;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;  
+  font-size: var(--themeFontSize);
+}
+.category-right{
+  flex: 2;
+}
+.category-title{
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: var(--themeFontSize);
+}
+.category-title text{
+  margin:20rpx;
+  color: #666;
+}
+.category-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-content navigator{
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  text-align: center;
+  font-size: var(--themeFontSize);
+}
+.category-content navigator image{
+  width: 100%;
+}
+
+.activeCategory{
+  color: var(--themeColor);
+}

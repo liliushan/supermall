@@ -1,0 +1,15 @@
+.tab_title{
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: var(--themeFontSize);
+}
+.tab_title view{
+  flex: 1;
+}
+.active_tab{
+  color: var(--themeColor);
+  border-bottom: 2rpx solid var(--themeColor);
+}

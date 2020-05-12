@@ -1,0 +1,30 @@
+<view class="chooseAddress">
+<text class="user">收货人:{{address.userName}}</text>
+	<text class="telnumber">电话:{{address.telNumber}}</text>
+	<view class="address">住址:{{address.provinceName + address.cityName +address.countyName + address.detailInfo}}</view>
+</view>
+
+<!-- 标题部分 -->
+<view class="context-title">购物车</view>
+
+<!-- 商品展示 -->
+<view class="goods-box">
+		<view class="goods-item" wx:for="{{good_list}}">
+      <view class="imgShow">
+        <image mode="widthFix" src="{{item.pics[0].pics_sma}}"></image>
+      </view>
+      <view class="goods_info">
+        <view>{{item.goods_name}}</view>
+        <view class="cprice">
+          <view>￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </view>
+
+</view>
+
+<!-- 底部的工具栏 -->
+<view class="footer_tool">
+	<view class="full_price">合计:<text>￥{{fullPrice}}</text></view>
+	<navigator url="/pages/pay/index"><view class="count" bindtap="settlement">支护({{fullCount}})</view></navigator>
+</view>

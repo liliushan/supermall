@@ -1,0 +1,6 @@
+<view class="tab_box">
+  <view class="tab_title">
+    <view wx:for="{{tab_title}}" class="{{currentTab===index?'active_tab':''}}" bindtap="addActiveTab" data-index="{{index}}">{{item}}</view>
+  </view>
+  <view class="tab_context"></view>
+</view>

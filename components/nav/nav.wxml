@@ -1,0 +1,7 @@
+<view class="nav">
+  <view wx:for="{{navList}}">
+    <navigator>
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+</view>
